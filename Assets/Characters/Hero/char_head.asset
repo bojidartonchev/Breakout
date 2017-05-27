@@ -76,17 +76,49 @@ Mesh:
     shapes: []
     channels: []
     fullWeights: []
-  m_BindPose: []
+  m_BindPose:
+  - e00: 0.48083463
+    e01: 0.8768113
+    e02: 0
+    e03: 2.3845062
+    e10: -0.8768113
+    e11: 0.48083463
+    e12: 0
+    e13: -0.40436313
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.8276063
+    e01: -0.56130886
+    e02: 0
+    e03: 0.28032297
+    e10: 0.56130886
+    e11: 0.8276063
+    e12: 0
+    e13: 1.3297306
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
   m_BoneNameHashes: 
   m_RootBoneNameHash: 0
   m_MeshCompression: 0
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexBuffer: 020001000300020004000000030006000200060004000200030005000600060005000700
+  m_IndexBuffer: 060005000700060004000200030005000600020001000300020004000000030006000200
   m_Skin:
-  - weight[0]: 0.9471449
-    weight[1]: 0.05285507
+  - weight[0]: 0.94460094
+    weight[1]: 0.055399094
     weight[2]: 0
     weight[3]: 0
     boneIndex[0]: 1
@@ -101,24 +133,24 @@ Mesh:
     boneIndex[1]: 0
     boneIndex[2]: 0
     boneIndex[3]: 0
-  - weight[0]: 0.9876702
-    weight[1]: 0.0123298075
+  - weight[0]: 0.9775893
+    weight[1]: 0.022410674
     weight[2]: 0
     weight[3]: 0
     boneIndex[0]: 1
     boneIndex[1]: 0
     boneIndex[2]: 0
     boneIndex[3]: 0
-  - weight[0]: 0.9575526
-    weight[1]: 0.04244735
+  - weight[0]: 0.9519608
+    weight[1]: 0.048039194
     weight[2]: 0
     weight[3]: 0
     boneIndex[0]: 1
     boneIndex[1]: 0
     boneIndex[2]: 0
     boneIndex[3]: 0
-  - weight[0]: 0.8750955
-    weight[1]: 0.1249045
+  - weight[0]: 0.8907317
+    weight[1]: 0.10926832
     weight[2]: 0
     weight[3]: 0
     boneIndex[0]: 1
@@ -133,12 +165,12 @@ Mesh:
     boneIndex[1]: 0
     boneIndex[2]: 0
     boneIndex[3]: 0
-  - weight[0]: 0.54352427
-    weight[1]: 0.45647576
+  - weight[0]: 0.5680362
+    weight[1]: 0.43196383
     weight[2]: 0
     weight[3]: 0
-    boneIndex[0]: 0
-    boneIndex[1]: 1
+    boneIndex[0]: 1
+    boneIndex[1]: 0
     boneIndex[2]: 0
     boneIndex[3]: 0
   - weight[0]: 1
@@ -268,8 +300,8 @@ MonoBehaviour:
   - {x: 28.000002, y: 907}
   - {x: 28.000002, y: 523}
   m_BoneWeights:
-  - weight0: 0.9471449
-    weight1: 0.05285507
+  - weight0: 0.94460094
+    weight1: 0.055399094
     weight2: 0
     weight3: 0
     boneIndex0: 1
@@ -284,24 +316,24 @@ MonoBehaviour:
     boneIndex1: -1
     boneIndex2: -1
     boneIndex3: -1
-  - weight0: 0.9876702
-    weight1: 0.0123298075
+  - weight0: 0.9775893
+    weight1: 0.022410674
     weight2: 0
     weight3: 0
     boneIndex0: 1
     boneIndex1: 0
     boneIndex2: -1
     boneIndex3: -1
-  - weight0: 0.9575526
-    weight1: 0.04244735
+  - weight0: 0.9519608
+    weight1: 0.048039194
     weight2: 0
     weight3: 0
     boneIndex0: 1
     boneIndex1: 0
     boneIndex2: -1
     boneIndex3: -1
-  - weight0: 0.8750955
-    weight1: 0.1249045
+  - weight0: 0.8907317
+    weight1: 0.10926832
     weight2: 0
     weight3: 0
     boneIndex0: 1
@@ -316,12 +348,12 @@ MonoBehaviour:
     boneIndex1: -1
     boneIndex2: -1
     boneIndex3: -1
-  - weight0: 0.54352427
-    weight1: 0.45647576
+  - weight0: 0.5680362
+    weight1: 0.43196383
     weight2: 0
     weight3: 0
-    boneIndex0: 0
-    boneIndex1: 1
+    boneIndex0: 1
+    boneIndex1: 0
     boneIndex2: -1
     boneIndex3: -1
   - weight0: 1
@@ -351,5 +383,49 @@ MonoBehaviour:
     index2: 1
   m_Holes: []
   m_Indices: 060000000500000007000000060000000400000002000000030000000500000006000000020000000100000003000000020000000400000000000000030000000600000002000000
-  m_BindPoses: []
+  m_BindPoses:
+  - bindPose:
+      e00: 0.48083463
+      e01: 0.8768113
+      e02: 0
+      e03: 2.3845062
+      e10: -0.8768113
+      e11: 0.48083463
+      e12: 0
+      e13: -0.40436313
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    boneLength: 1.087103
+    path: Spine/Neck
+    name: Neck
+    color: {r: 1, g: 0, b: 0, a: 1}
+    zOrder: 0
+  - bindPose:
+      e00: 0.8276063
+      e01: -0.56130886
+      e02: 0
+      e03: 0.28032297
+      e10: 0.56130886
+      e11: 0.8276063
+      e12: 0
+      e13: 1.3297306
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    boneLength: 1
+    path: Spine/Neck/Head
+    name: Head
+    color: {r: 1, g: 0.75, b: 0, a: 1}
+    zOrder: 0
   m_Blendshapes: []
