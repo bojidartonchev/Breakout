@@ -1839,6 +1839,34 @@ MonoBehaviour:
   m_Bones: []
   m_BoneTransforms:
   - {fileID: 1870466836}
+--- !u!1 &1384795418
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1384795419}
+  m_Layer: 8
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1384795419
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1384795418}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -4.48, z: 0}
+  m_LocalScale: {x: 2.5344164, y: 2.534417, z: 2.534417}
+  m_Children: []
+  m_Father: {fileID: 1430235129}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1402695443
 GameObject:
   m_ObjectHideFlags: 0
@@ -1896,6 +1924,7 @@ GameObject:
   - component: {fileID: 1430235130}
   - component: {fileID: 1430235131}
   - component: {fileID: 1430235132}
+  - component: {fileID: 1430235133}
   m_Layer: 0
   m_Name: Character
   m_TagString: Player
@@ -1910,12 +1939,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1430235128}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.17, y: -1.16, z: 0}
+  m_LocalPosition: {x: -7.12, y: -1.11, z: 0}
   m_LocalScale: {x: 0.39456815, y: 0.3945681, z: 0.3945681}
   m_Children:
   - {fileID: 1660037119}
   - {fileID: 2094253638}
   - {fileID: 1622590209}
+  - {fileID: 1384795419}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1932,9 +1962,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minGroundNormalY: 0.65
   gravityModifier: 1
+  targetVelocity: {x: 0, y: 0}
+  grounded: 0
+  groundNormal: {x: 0, y: 0}
+  rb2d: {fileID: 0}
+  velocity: {x: 0, y: 0}
+  contactFilter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask: {}
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
   facingRight: 1
   maxSpeed: 7
   jumpTakeOffSpeed: 7
+  animator: {fileID: 0}
 --- !u!95 &1430235131
 Animator:
   serializedVersion: 3
@@ -1972,6 +2020,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1430235133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1430235128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e37ba7e8b026da43a8fffb429ed798c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 100
+  jumpForce: 5
+  groundCheck: {fileID: 1384795419}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 4294967039
 --- !u!1 &1454763148
 GameObject:
   m_ObjectHideFlags: 0
@@ -2316,7 +2381,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 0.21323532, g: 0.8697768, b: 1, a: 0.898}
-  m_Length: 1.08248
+  m_Length: 1.0824801
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 104321091}
   m_AttachedIK: {fileID: 0}
@@ -2564,7 +2629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 0, b: 0, a: 0.3}
-  m_Length: 1.4437128
+  m_Length: 1.4437125
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 1013434261}
   m_AttachedIK: {fileID: 0}
