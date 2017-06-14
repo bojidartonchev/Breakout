@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour {
 
+    public Animation Jump;
     public float moveSpeed;
     Animator anim;
     public float jumpForce;
@@ -72,5 +73,4 @@ public class PlayerControl : MonoBehaviour {
         }
 
     }
-
 }
