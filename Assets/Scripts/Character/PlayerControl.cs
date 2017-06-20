@@ -31,7 +31,7 @@ public class PlayerControl : MonoBehaviour {
         grounded = Physics2D.OverlapCircle(groundCheck.position,groundRadius, whatIsGround);
         anim.SetBool("Ground", grounded);
 
-        anim.SetFloat("vSpeed", rigBody.velocity.y);
+        anim.SetFloat("Speed", rigBody.velocity.y);
 
         float horizontal = Input.GetAxis("Horizontal");
 
