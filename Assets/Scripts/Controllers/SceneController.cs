@@ -21,9 +21,6 @@ public class SceneController : MonoBehaviour
             Destroy(gameObject);
         }
 
-        //Sets this to not be destroyed when reloading scene
-        DontDestroyOnLoad(gameObject);
-
         //Call the InitGame function to initialize the first level 
         InitGame();
     }
