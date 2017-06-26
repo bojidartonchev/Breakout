@@ -19,6 +19,12 @@ public class GameLoader : MonoBehaviour
         {
             InstantiateController<IAPController>();
         }
+
+        //SNSController
+        if (SNSController.Instance == null)
+        {
+            InstantiateController<SNSController>();
+        }
     }
 
     private void InstantiateController<T> () where T : MonoBehaviour
