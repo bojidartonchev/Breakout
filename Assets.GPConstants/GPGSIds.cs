@@ -24,7 +24,11 @@
 
 public static class GPGSIds
 {
+        public const string achievement_test5 = "CgkI-IqMw_sJEAIQBQ"; // <GPGSID>
         public const string achievement_test = "CgkI-IqMw_sJEAIQAQ"; // <GPGSID>
+        public const string achievement_test2 = "CgkI-IqMw_sJEAIQAg"; // <GPGSID>
+        public const string achievement_test3 = "CgkI-IqMw_sJEAIQAw"; // <GPGSID>
+        public const string achievement_test4 = "CgkI-IqMw_sJEAIQBA"; // <GPGSID>
 
 }
 
