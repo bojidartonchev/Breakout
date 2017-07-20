@@ -1,8 +1,9 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SocialPlatforms;
+#if UNITY_ANDROID
 using GooglePlayGames;
 using GooglePlayGames.BasicApi;
+#endif
 using UnityEngine.UI;
 
 public class SNSController : MonoBehaviour
@@ -22,20 +23,20 @@ public class SNSController : MonoBehaviour
             //Then destroy this. This enforces our singleton pattern, meaning there can only ever be one instance of a GameManager.
             Destroy(gameObject);
         }
-        PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder()
 
-            .Build();
+#if UNITY_ANDROID
+        PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder().Build();
 
         PlayGamesPlatform.InitializeInstance(config);
+
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
         // recommended for debugging:
         PlayGamesPlatform.DebugLogEnabled = true;
+#endif
+
         // Activate the Google Play Games platform
         PlayGamesPlatform.Activate();
-
-    }
-
-    public void Login()
-    {
+#endif
         Social.localUser.Authenticate(ProcessAuthentication);
     }
 
@@ -43,36 +44,46 @@ public class SNSController : MonoBehaviour
     // Note that if the operation is successful, Social.localUser will contain data from the server. 
     void ProcessAuthentication(bool success)
     {
-        var log = GameObject.Find("statuslog");
-        log.GetComponent<Text>().text = success ? "connected" : "error connecting";
         if (success)
         {
-            //DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
         }
     }
 
-    public static void ShowLeaderboard()
+    public void LogoutMainSNS()
+    {
+#if UNITY_ANDROID
+        PlayGamesPlatform.Instance.SignOut();
+#endif
+    }
+
+    public void ShowLeaderboard()
     {
         if (Social.localUser.authenticated)
         {
             Social.ShowLeaderboardUI();
         }
     }
-    public static void ShowAchievements()
+
+    public void ShowAchievements()
     {
         if (Social.localUser.authenticated)
         {
             Social.ShowAchievementsUI();
         }
     }
-    public static void ReportLeaderboard(long score, string leaderboard)
+
+    public void ReportLeaderboard(long score, string leaderboard)
     {
         if (Social.localUser.authenticated)
         {
             Social.ReportScore(score, leaderboard, success => { });
         }
     }
-    public static void ReportAchievement(string achievementID, double progress)
+
+    public void ReportAchievement(string achievementID, double progress)
     {
         if (Social.localUser.authenticated)
         {

@@ -16,7 +16,6 @@ public class LevelButtonScript : MonoBehaviour {
     
     public void LoadAttachedLevel()
     {
-        //SceneController.Instance.LoadLevel(m_level);
-        SNSController.Instance.Login();
+        SceneController.Instance.LoadLevel(m_level);
     }
 }
